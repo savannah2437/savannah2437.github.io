@@ -1,31 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SubredditFlora</title>
   <style> 
-    
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#000;color:#fff}
-    header{padding:20px;text-align:center;font-size:32px;font-weight:bold}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000;
+      color: #fff;
+    }
 
-   
-    grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:16px}
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+    }
 
-   
-    card{background:#D9D9D9;border:1px solid #333}
-    img-wrap{width:100%;
-             aspect-ratio:1/1;overflow:hidden;background:#222}
-    img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 16px;
+    }
 
-    
-    meta{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-top:1px solid #333}
-    label{font-size:12px;color:#a3a3a3}
-    seen{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#a3a3a3;user-select:none}
-    seen input{width:16px;height:16px}
+    .card {
+      background: #D9D9D9;
+      border: 1px solid #343;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      aspect-ratio: 1 / 1;
+      padding: 8px;
+      box-sizing: border-box;
+      color: #000;
+    }
 
-   
-        card.is-seen .label{color:#86efac}
+    .img-wrap {
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: #222;
+    }
+
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .meta {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+
+    .label {
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .seen {
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .seen input {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
@@ -33,37 +95,40 @@
 
   <main>
     <section class="grid">
+
+     
       <figure class="card">
         <div class="img-wrap">
-          <img src="explainlikeimfive.jpg">
+          <a href="plant1.html"><img src="explainlikeimfive.jpg" alt="Plant 1" /></a>
         </div>
         <div class="meta">
           <span class="label">This moss ball (Tillandsia recurvata) is commonly found in the Southern US. These little moss balls are always seen in groups because that really the only way they can work. A lot of them want to be independant but they cant figure it out. Thats why you might often see them on r/ExplainLikeImFive</span>
-          <label class="seen"><input type="checkbox"><span>Mark as seen</span></label></div>
+          <label class="seen"><input type="checkbox" /> <span>Mark as seen</span></label>
+        </div>
       </figure>
+
+      
       <figure class="card">
-        <div class="img-wrap"><img src="askwomen.jpg" >
+        <div class="img-wrap">
+          <a href="plant2.html"><img src="askwomen.jpg" alt="Plant 2" /></a>
         </div>
         <div class="meta">
           <span class="label">This sweet acacia tree (Vachellia farnesiana) is known for its fragrant golden flowers that bloom in the wintertime. Its a very low maintenance plant- similar to some guys out there. Thats why this plant is often found on r/askWomen. </span>
-          <label class="seen">
-            <input type="checkbox">
-            <span>Mark as seen</span>
-          </label>
+          <label class="seen"><input type="checkbox" /> <span>Mark as seen</span></label>
         </div>
       </figure>
+
+      
       <figure class="card">
         <div class="img-wrap">
-          <img src="drugs.jpg" >
+          <a href="plant3.html"><img src="drugs.jpg" alt="Plant 3" /></a>
         </div>
         <div class="meta">
           <span class="label">These are the dead leaves of a Texas Live Oak Tree (Quercus fusiformis) They can commonly be found in Austin Texas! This one possibly hung out with the wrong kind of Austinites... this tree seems to have abused some drugs here and there and they aged horribly. Their biggest secret is that they are a moderator on R/Drugs... Do better Live Oak...</span>
-          <label class="seen">
-            <input type="checkbox">
-            <span>Mark as seen</span>
-          </label>
+          <label class="seen"><input type="checkbox" /> <span>Mark as seen</span></label>
         </div>
       </figure>
+
       <figure class="card">
         <div class="img-wrap"><img src="outoftheloop.jpg" >
         </div>
@@ -75,6 +140,7 @@
           </label>
         </div>
       </figure>
+      
       <figure class="card">
         <div class="img-wrap">
           <img src="malefashionadvice.jpg" >
@@ -87,6 +153,7 @@
           </label>
         </div>
       </figure>
+      
       <figure class="card">
         <div class="img-wrap">
           <img src="dating.jpg">
@@ -124,6 +191,7 @@
           </label>
         </div>
       </figure>
+      
       <figure class="card">
         <div class="img-wrap">
           <img src="politics.jpg">
@@ -136,6 +204,7 @@
           </label>
         </div>
       </figure>
+      
       <figure class="card">
         <div class="img-wrap">
           <img src="amIoverreacting.jpg">
