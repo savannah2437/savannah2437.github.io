@@ -1,45 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="favicon.ico" />
-    <title>Subreddit Flora</title>
-    <style>
-      body {
-        margin: 0;
-        font-family:Arial, Helvetica, sans-serif;
-        background: #000;
-        color: #fff;
-      }
-      header {
-        padding: 20px;
-        text-align: center;
-        font-size: 32px;
-        font-weight: bold;
-      }
-    </style>
-    <link rel="stylesheet" href="https://use.typekit.net/usd4ass.css">
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header>
-      Subreddit Flora
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubredditFlora</title>
+  <style>
+    
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#000;color:#fff}
+    header{padding:20px;text-align:center;font-size:32px;font-weight:bold}
 
-      <div class="card-grid">
-        <div class="card">Card 1</div>
-        <div class="card">Card 2</div>
-        <div class="card">Card 3</div>
-        <div class="card">Card 4</div>
-        <div class="card">Card 5</div>
-        <div class="card">Card 6</div>
-        <div class="card">Card 7</div>
-        <div class="card">Card 8</div>
-        <div class="card">Card 9</div>
-        <div class="card">Card 10</div>
-        
-      </div>
+   
+    grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:16px}
 
-  </body>
+   
+    card{background:#D9D9D9;border:1px solid #333}
+    img-wrap{width:100%;
+             aspect-ratio:1/1;overflow:hidden;background:#222}
+    img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+
+    
+    meta{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-top:1px solid #333}
+    label{font-size:12px;color:#a3a3a3}
+    seen{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#a3a3a3;user-select:none}
+    seen input{width:16px;height:16px}
+
+   
+        card.is-seen .label{color:#86efac}
+  </style>
+</head>
+<body>
+  <header>Subreddit Flora</header>
+
+  <main>
+    <section class="grid">
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="explainlikeimfive.jpg">
+        </div>
+        <div class="meta">
+          <span class="label">This moss ball (Tillandsia recurvata) is commonly found in the Southern US. These little moss balls are always seen in groups because that really the only way they can work. A lot of them want to be independant but they cant figure it out. Thats why you might often see them on r/ExplainLikeImFive</span>
+          <label class="seen"><input type="checkbox"><span>Mark as seen</span></label></div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap"><img src="askwomen.jpg" >
+        </div>
+        <div class="meta">
+          <span class="label">This sweet acacia tree (Vachellia farnesiana) is known for its fragrant golden flowers that bloom in the wintertime. Its a very low maintenance plant- similar to some guys out there. Thats why this plant is often found on r/askWomen. </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="drugs.jpg" >
+        </div>
+        <div class="meta">
+          <span class="label">These are the dead leaves of a Texas Live Oak Tree (Quercus fusiformis) They can commonly be found in Austin Texas! This one possibly hung out with the wrong kind of Austinites... this tree seems to have abused some drugs here and there and they aged horribly. Their biggest secret is that they are a moderator on R/Drugs... Do better Live Oak...</span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap"><img src="outoftheloop.jpg" >
+        </div>
+        <div class="meta"><span class="label">This Firebush (aka Hamelia) is fast growing and is commonly found in Mexico, South Florida, and Central/South America. This shrub is drought tolerant and can grow up to 10ish feet tall. Since it cant grow as tall as the trees, sadly the Firebush stays out of the drama. It spends at least 8 hours a day on r/OutOftheLoop because its gota stay in the loop somehow.
+        </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="malefashionadvice.jpg" >
+        </div>
+        <div class="meta">
+          <span class="label">This plant is the texas Mountain laurel (Dermatophyllum secundiflorum). They have glossy green leaves that produce clusters of fragrant, purple flowers in the spring. They pop out pretty much one time a year. This is mainly because they spend all year scrolling on r/MaleFashionAdvice and they get the stregth to show out only once a year. </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="dating.jpg">
+        </div>
+        <div class="meta">
+          <span class="label">This is the beautiful Pride of Barbados (Caesalpinia pulcherrima). It has bright orange-red flowers with long red stamens. It thrives in hot humid climates which makes it a great fit for Texas. This plant knows shes a baddie and she just wants to spread love. When she does get on the dating scene shes always submitting questions on r/Dating because she wants to make sure shes doing this whole love thing right. Her biggest fear is breaking someones heart. 
+          </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="antiwork.jpg">
+        </div>
+        <div class="meta">
+          <span class="label">This plant is called Longhair Plume Grass aka Dichelache crinita. It can grow up to 1.5 meters high. This fella is a little odd because there was only one of him there, not a bunch. He seems to be on his own path of life, not following the rules. Rumor has it he doesnt want a real job, he just lets life flow through him. His family argues he needs to get off r/antiWork but he claims his lifestyle is a political statement (he needs to move out).  </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="socialskills.jpg" >
+        </div>
+        <div class="meta">
+          <span class="label">This is a type of Yucca (Yucca elata). Its known for its narrow, bright green rigid leaves that radiate outward like a rounded head of hair. It grows about 4 ft tall in 10 years. Because of the "late blooming" the yucca is a bit off socially but everyone still loves him- if anything its his charm. He tries to study methods on r/SocialSkills but its ok yucca, just be yourself. </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="politics.jpg">
+        </div>
+        <div class="meta">
+          <span class="label">This plant is the Golden Thryallis (aka Galphimia Glauca). It has bright yellow flowers that bloom late spring through fall. It thrives in the sun and can tolderate both acidic and alkaline conditions. However when it comes to politics, they have zero tolerence for their opposing views. They stay to their morals and want justice for all. But sometimes they can get a little too wrapped up in r/Politics. Their favorite hobby is getting in a political argument online. </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+      <figure class="card">
+        <div class="img-wrap">
+          <img src="amIoverreacting.jpg">
+        </div>
+        <div class="meta">
+          <span class="label">This is the Yellow Bells plants aka Esperanza Flowers. They are popular in warm climates like Texas since they can survive droughts. They are like magnets to bees, butterflies and hummingbirds. Sometimes all the attention from those pollinators freaks them out a little. Her friend says its natural but she cant help but be a little weirded out. She scrolls on r/AmIOverReacting for reassurance everyday which helps her feel better. #Celeb. 
+          </span>
+          <label class="seen">
+            <input type="checkbox">
+            <span>Mark as seen</span>
+          </label>
+        </div>
+      </figure>
+    </section>
+  </main>
+
+  
+</body>
 </html>
