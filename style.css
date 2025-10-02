@@ -3,6 +3,8 @@
   background: #ddd;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   transition: background 0.3s;
+  padding: 12px;           
+  max-width: 320px;         
 }
 
 .card:hover {
@@ -11,7 +13,55 @@
 
 .img-wrap img {
   border-radius: 6px;
+  width: 100%;
+  height: auto;
 }
+
+
+.card .title {
+  margin: 8px 0 0;
+  font-weight: bold;
+  font-size: 1.2rem;   
+}
+
+
+.card .desc {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+.card .desc summary {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+}
+.card .desc summary .less { display: none; }
+.card .desc[open] summary .more { display: none; }
+.card .desc[open] summary .less { display: inline; }
+.card .desc p {
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+
+.seen {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;   
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+}
+.seen input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.seen .checked { display: none; }
+.seen input:checked ~ .mark { display: none; }
+.seen input:checked ~ .checked { display: inline; }
+
 
 .label {
   background: #eee;
@@ -21,14 +71,11 @@
   color: #000;
 }
 
+
 header {
   background: #222;
   color: #fff;
   padding: 20px;
   text-align: center;
   font-size: 28px;
-}
-
-.seen {
-  margin-top: 6px;
 }
